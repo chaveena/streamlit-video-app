@@ -7,7 +7,7 @@ NC='\033[0m'
 S3_PATH=$1
 
 # Run the Streamlit app and save the output to "temp.txt"
-streamlit run $1 --server.runOnSave true > temp.txt & 
+streamlit run $1 --server.runOnSave true | tee temp.txt & 
 
 # Read the text file using cat
 echo "Getting the URL to view your Streamlit app in the browser"
